@@ -3,13 +3,13 @@
 # Adamur: Secure User Management Backend
 
 ## Overview
-Adamur is a modular, production-oriented backend for user management on educational platforms. 
+Adamur is a modular backend for user management on educational platforms. 
 It provides secure registration, authentication, account verification, and password reset workflows through a GraphQL API. 
 
 The system emphasizes maintainability, security, and scalability, with explicit architectural decisions to support real-world usage.
 
 ### Key Design Highlights
-- JWT-based authentication and role-based access control
+- JWT-based authentication
 - Modular GraphQL API layer for maintainable and extensible operations
 - Prisma-based database modeling with migrations for reproducible schema
 - Email verification and password reset workflows via configurable SMTP
@@ -21,12 +21,12 @@ The system emphasizes maintainability, security, and scalability, with explicit 
 Adamur is designed as a backend-first service with clear separation of concerns:
 
 1. **API Layer** – GraphQL mutations handle all user operations.
-2. **Authentication & Security** – JWT tokens for stateless authentication, role-based access control for resource protection.
+2. **Authentication & Security** – JWT tokens for stateless authentication.
 3. **Persistence Layer** – Prisma ORM with MySQL (or compatible) backend; migrations ensure consistent schema management.
 4. **Email Layer** – SMTP integration for account verification and password reset notifications.
 5. **Environment Config** – All credentials and secrets stored in `.env` to isolate runtime configuration from code.
 
-This design prioritizes **security, observability, and modularity** for production-grade deployments.
+This design prioritizes **security, observability, and modularity**.
 
 ---
 
